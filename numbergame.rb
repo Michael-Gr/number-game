@@ -69,8 +69,6 @@ loop do
     reply "No, too low. Keep going!"
   end
 
-  number_list << number_f2
-
   if number_list.length >= 5
     puts "
 
@@ -90,6 +88,10 @@ many times. You'll have to try again.
       break
     when "y","y.","yes","yes.","Yes","YES","YES."
       puts "Well too bad. I haven't figured that part out yet."
+      next
+      # Still need to fix "next"
+    else
+      puts "I don't understand, I'm shutting down."
       break
     end
   end
